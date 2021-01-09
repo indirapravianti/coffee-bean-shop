@@ -1,0 +1,24 @@
+<html>
+    <%- include('../partials/head.ejs') %>
+<body>
+
+    <%- include('../partials/nav.ejs') %>
+
+    <div class="recipe-content">
+        <h2>All Recipes</h2>
+
+        <% if (recipes.length > 0) { %>
+            <% recipes.forEach( recipe => { %>
+                <a class="single" href="/recipes/<%= recipe._id %>">
+                    <h3 class="title"><%= recipe.title%></h3>
+                    <p class="snippet"><%= recipe.snippet%></p>
+                </a>
+            <% }) %>
+        <% } else { %>
+            <p>Sorry, there are no recipes at the moment.</p>
+        <% } %>
+    </div>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

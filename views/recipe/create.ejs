@@ -1,0 +1,21 @@
+<html>
+    <%- include('../partials/head.ejs') %>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <div class="create-recipe content">
+        <form action="/recipes" method="POST">
+            <label for="title">Recipe Name</label>
+            <input type="text" id="title" name="title" required>
+            <label for="snippet">Description</label>
+            <input type="text" id="snippet" name="snippet" required>
+            <label for="steps">Steps</label>
+            <input type="text" id="steps" name="steps" required>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
