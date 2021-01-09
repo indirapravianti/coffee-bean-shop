@@ -4,6 +4,9 @@
 <body>
     <%- include('../partials/nav.ejs') %>
 
+    <div class="description">
+        <p>Feel free to submit your own coffee recipe!</p>
+    </div>
     <div class="create-recipe content">
         <form action="/recipes" method="POST">
             <label for="title">Recipe Name</label>
@@ -11,7 +14,7 @@
             <label for="snippet">Description</label>
             <input type="text" id="snippet" name="snippet" required>
             <label for="steps">Steps</label>
-            <input type="text" id="steps" name="steps" required>
+            <textarea type="text" id="steps" name="steps" cols="50" required></textarea>
             <button>Submit</button>
         </form>
     </div>

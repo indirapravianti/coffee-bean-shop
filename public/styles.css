@@ -5,6 +5,7 @@ body{
   padding: 0 20px;
   font-family: 'Raleway', serif;
   max-width: 1200px;
+  background-color: rgb(245, 245, 245);
 }
 p, h1, h2, h3, a, ul{
   margin: 0;
@@ -50,15 +51,47 @@ h3{
   text-transform: capitalize;
   margin-bottom: 8px;
 }
+.home {
+  font-size: 48px;
+  text-align: center;
+}
 .content{
   margin-left: 20px;
 }
-/* index styles */
 /* details styles */
+.details{
+  position: relative;
+}
+.delete{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 20%;
+  padding: 8px;
+  color:rgb(204, 58, 58)
+}
+.delete:hover{
+  cursor: pointer;
+  color:rgb(255, 130, 130);
+}
+/* index styles */
+.recipes a{
+  display: block;
+  margin: 40px 0;
+  padding-left: 30px;
+  border-left: 6px solid crimson;
+}
+.recipes a:hover h3{
+  color: crimson;
+}
 /* create styles */
-.create-recipe form{
+.description, .create-recipe form{
   max-width: 400px;
   margin: 0 auto;
+}
+.description {
+  text-align: center;
+  font-weight: 700;
 }
 .create-recipe input,
 .create-recipe textarea{

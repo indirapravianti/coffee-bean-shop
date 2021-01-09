@@ -62,8 +62,9 @@ app.get('/single-recipe', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.redirect('/recipes');
+  res.render('home', {title: 'Home'});
 });
+
 
 app.get('/about', (req, res) => {
     // res.sendFile('./views/about.html', {root: __dirname});
